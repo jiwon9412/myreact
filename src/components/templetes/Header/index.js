@@ -1,32 +1,38 @@
 import React from 'react';
-import { Select, Image } from 'antd';
+import {} from 'antd';
+
+import Logo from '../../atoms/logo';
+import MenuSelect from '../../atoms/menuSelect';
 
 export default function Header() {
-  const { Option } = Select;
-
-  const handleChange = (value) => {
+  /**
+   * 메뉴 선택 시 화면 넘어가는 함수
+   * @param {*} value
+   */
+  const selectMenu = (value) => {
+    // value값으로 화면 넘기는 api
     alert(`${value} 화면으로 넘어갑니다.`);
   };
+
   return (
     <div>
-      <Image style={{ width: 50, marginLeft: 30 }} src="logo192.png" />
-      <Select
-        defaultValue="board"
-        style={{ width: 120, marginLeft: 30 }}
-        onChange={handleChange}
-      >
-        <Option value="mail">메일</Option>
-        <Option value="board">게시판</Option>
-        <Option value="message">메시징</Option>
-        <Option value="schedule">일정</Option>
-        <Option value="publicMail">공용메일</Option>
-        <Option value="addressBook">주소록</Option>
-        <Option value="reservation">예약</Option>
-        <Option value="member">인사</Option>
-        <Option value="payment">전자결재</Option>
-        <Option value="store">스토어</Option>
-        <Option value="group">그룹</Option>
-      </Select>
+      <Logo />
+      <MenuSelect
+        menus={[
+          { label: '메일', value: 'mail' },
+          { label: '게시판', value: 'board' },
+          { label: '메시징', value: 'message' },
+          { label: '일정', value: 'schedule' },
+          { label: '공용메일', value: 'publicMail' },
+          { label: '주소록', value: 'addressBook' },
+          { label: '예약', value: 'reservation' },
+          { label: '인사', value: 'member' },
+          { label: '전자결재', value: 'payment' },
+          { label: '스토어', value: 'store' },
+          { label: '그룹', value: 'group' },
+        ]}
+        selectMenu={selectMenu}
+      />
     </div>
   );
 }
