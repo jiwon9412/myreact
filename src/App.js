@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Row, Col } from 'antd';
+import { Row, Col, Divider } from 'antd';
 
 import Main from './components/pages/main';
 import Header from './components/templetes/Header';
@@ -15,6 +15,7 @@ function App() {
             <Header />
           </Col>
         </Row>
+        <Divider />
         <Row>
           <Col span={24}>
             <Routes>
