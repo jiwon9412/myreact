@@ -1,17 +1,20 @@
 import React from 'react';
 import {} from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from '../../atoms/logo';
 import MenuSelect from '../../atoms/menuSelect';
 
 export default function Header() {
+  let navigate = useNavigate();
+
   /**
    * 메뉴 선택 시 화면 넘어가는 함수
    * @param {*} value
    */
   const selectMenu = (value) => {
     // value값으로 화면 넘기는 api
-    alert(`${value} 화면으로 넘어갑니다.`);
+    navigate(`/${value}`);
   };
 
   return (

@@ -4,7 +4,9 @@ import { Row, Col, Divider } from 'antd';
 
 import Main from './components/pages/main';
 import Header from './components/templetes/Header';
-import Footer from './components/templetes/Footer';
+import Board from './components/pages/board';
+import BoardSide from './components/pages/boardSide';
+import Home from './components/pages/home';
 
 function App() {
   return (
@@ -17,15 +19,17 @@ function App() {
         </Row>
         <Divider />
         <Row>
-          <Col span={24}>
+          <Col span={3}>
             <Routes>
-              <Route path="/main" element={<Main />} />
+              <Route path="/board" element={<BoardSide />} />
             </Routes>
           </Col>
-        </Row>
-        <Row>
-          <Col span={24}>
-            <Footer />
+          <Col span={21}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/main" element={<Main />} />
+              <Route path="/board" element={<Board />} />
+            </Routes>
           </Col>
         </Row>
       </BrowserRouter>
