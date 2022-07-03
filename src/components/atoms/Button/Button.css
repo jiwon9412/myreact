@@ -1,4 +1,12 @@
 .sideFirstName {
-  margin-top: 20;
-  margin-left: 20;
+  width: 200px;
+  height: 100px;
+  display: block;
+  margin-top: 3vh;
+}
+
+.searchButton {
+  width: 200px;
+  background-color: black;
+  display: inline-block;
 }

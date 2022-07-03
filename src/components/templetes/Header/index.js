@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 import Logo from '../../atoms/logo';
 import MenuSelect from '../../atoms/menuSelect';
+import { MySearch } from '../../atoms/Button';
+
+import '../templetes.css';
 
 export default function Header() {
   let navigate = useNavigate();
@@ -17,8 +20,13 @@ export default function Header() {
     navigate(`/${value}`);
   };
 
+  const searchHandler = (value) => {
+    //검색 조회 api
+    alert('검색api호출', value);
+  };
+
   return (
-    <div>
+    <div className="header">
       <Logo />
       <MenuSelect
         menus={[
@@ -35,6 +43,11 @@ export default function Header() {
           { label: '그룹', value: 'group' },
         ]}
         selectMenu={selectMenu}
+      />
+      <MySearch
+        placeholder="게시글 검색"
+        onSerch={searchHandler}
+        className="searchButton"
       />
     </div>
   );

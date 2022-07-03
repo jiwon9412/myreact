@@ -13,18 +13,18 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Row>
-          <Col span={24}>
+          <Col flex={24}>
             <Header />
           </Col>
         </Row>
-        <Divider />
+
         <Row>
-          <Col span={3}>
+          <Col flex={1}>
             <Routes>
               <Route path="/board" element={<BoardSide />} />
             </Routes>
           </Col>
-          <Col span={21}>
+          <Col flex={10}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/main" element={<Main />} />
