@@ -1,23 +1,31 @@
-import React from "react";
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-export default function MenuList ({data = []}) {
-    data.map((item) => {
-        console.log(item.menuNm);
-    })
-    return <div>    
-        <MenuUl>  
+export default function MenuList({ data = [] }) {
+  return (
+    <div>
+      <MenuUl>
         {data.map((item) => {
-            return(
-            <li>{item.menuNm}</li>
-            )
+          return (
+            <li>
+              <a className="item" href={item.value}>
+                {item.menuNm}
+              </a>
+            </li>
+          );
         })}
-        </MenuUl> 
+      </MenuUl>
     </div>
-      
+  );
 }
 
 const MenuUl = styled.ul`
-    list-style : none;
-    display : flex;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+
+  .item {
+    cursor: pointer;
+    color: #000000;
+  }
 `;
