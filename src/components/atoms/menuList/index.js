@@ -4,22 +4,22 @@ import styled from 'styled-components';
 export default function MenuList({ data = [] }) {
   return (
     <div>
-      <MenuUl>
+      <Menu>
         {data.map((item) => {
           return (
             <li>
-              <a className="item" href={item.value}>
-                {item.menuNm}
+              <a className="item" href={item?.value}>
+                {item?.menuNm}
               </a>
             </li>
           );
         })}
-      </MenuUl>
+      </Menu>
     </div>
   );
 }
 
-const MenuUl = styled.ul`
+const Menu = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-around;

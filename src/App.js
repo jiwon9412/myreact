@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Layout } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import styled from 'styled-components';
 
 import MenuList from './components/atoms/menuList';
@@ -16,7 +16,10 @@ function App() {
         </AppHeader>
 
         <AppContent>
-          <AboutMeDiv>AboutMe</AboutMeDiv>
+          <AboutMeDiv>
+            <h1>About Me</h1>
+            {/* <h2>프론트엔드 개발자 정지원입니다.</h2> */}
+          </AboutMeDiv>
           <SkillsDiv>Skills</SkillsDiv>
           <TimelineDiv>Timeline</TimelineDiv>
           <ProjectDiv>Project</ProjectDiv>
@@ -39,8 +42,15 @@ const AppContent = styled(Content)`
 `;
 
 const AboutMeDiv = styled.div`
-  background: #f59a86;
-  height: 300px;
+  height: 800px;
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 30px;
+  }
 `;
 
 const SkillsDiv = styled.div`
