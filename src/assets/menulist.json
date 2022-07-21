@@ -1,0 +1,22 @@
+[
+    {
+        "menuNm" : "About Me",
+        "menuValue" : "aboutme",
+        "link" : "/#1"
+    },
+    {
+        "menuNm" : "Skills",
+        "menuValue" : "skills",
+        "link" : "/#2"
+    },
+    {
+        "menuNm" : "Timeline",
+        "menuValue" : "timeline",
+        "link" : "/#3"
+    },
+    {
+        "menuNm" : "Project",
+        "menuValue" : "project",
+        "link" : "/#4"
+    }
+]
