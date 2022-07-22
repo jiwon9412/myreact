@@ -42,7 +42,7 @@ const AppContent = styled(Content)`
 `;
 
 const AboutMeDiv = styled.div`
-  height: 800px;
+  height: 600px;
   text-align: center;
 
   h1 {
@@ -54,17 +54,17 @@ const AboutMeDiv = styled.div`
 `;
 
 const SkillsDiv = styled.div`
-  background: #a8fea1;
-  height: 300px;
+  background: #e8f9ec;
+  height: 800px;
 `;
 
 const TimelineDiv = styled.div`
-  background: #a9fffe;
+  background: #effbfa;
   height: 300px;
 `;
 
 const ProjectDiv = styled.div`
-  background: #edd3ff;
+  background: #faf0f9;
   height: 300px;
 `;
 
